@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "./component/Navbar";
 import BannerSpinner from "./component/BannerSpinner";
 import MentalWellNessSec from "./component/MeltalWellNessSec";
+import Footer from "./component/Footer";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 // import img1 from "@/images/10012.avif";
@@ -93,6 +94,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Footer section */}
+      <Footer />
     </div>
   );
 }

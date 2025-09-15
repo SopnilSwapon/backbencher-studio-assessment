@@ -55,6 +55,30 @@ export default function ReadyAutomateSection() {
                 Stay on top of your recurring payments with ease
               </h2>
             </div>
+
+            {/* Ticker animation */}
+            <div className="overflow-hidden rounded-[24px] relative w-full">
+              <motion.div
+                className="flex gap-3"
+                animate={controls}
+                style={{ width: "max-content" }}
+              >
+                {tickerImages.map((src, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-50 h-50 rounded-[24px] overflow-hidden shadow-md"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Ticker ${i}`}
+                      width={120}
+                      height={120}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

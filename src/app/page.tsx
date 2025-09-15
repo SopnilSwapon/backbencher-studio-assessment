@@ -4,6 +4,8 @@ import Navbar from "./component/Navbar";
 import BannerSpinner from "./component/BannerSpinner";
 import MentalWellNessSec from "./component/MeltalWellNessSec";
 import Footer from "./component/Footer";
+import FAQAccordion from "./component/FAQAccordion";
+import AppButton from "./component/common/AppButton";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 // import img1 from "@/images/10012.avif";
@@ -40,12 +42,7 @@ export default function Home() {
       </div>
       <div className="py-10">
         <div className="text-center mx-auto">
-          <Link
-            href="/request-demo"
-            className="p-[6px] px-4 rounded-full bg-[#F1F1F1]"
-          >
-            Personal Growth
-          </Link>
+          <AppButton title="Personal Growth" />
           <h1 className="text-4xl md:text-8xl font-bold text-[#303A46] my-6">
             Feel more <br /> human every day
           </h1>
@@ -94,6 +91,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* FAQ Section */}
+      <FAQAccordion />
       {/* Footer section */}
       <Footer />
     </div>

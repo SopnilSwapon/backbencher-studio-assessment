@@ -6,6 +6,7 @@ import MentalWellNessSec from "./component/MeltalWellNessSec";
 import Footer from "./component/Footer";
 import FAQAccordion from "./component/FAQAccordion";
 import AppButton from "./component/common/AppButton";
+import ReadyAutomateSection from "./component/ReadyAutomateSection";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 // import img1 from "@/images/10012.avif";
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <div>
       {/* Navbar */}
-      {/* <Navbar /> */}
+      <Navbar />
 
       {/* Hero title section */}
       <div className="py-10">
@@ -91,6 +92,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Ready Automate section */}
+      <ReadyAutomateSection />
       {/* FAQ Section */}
       <FAQAccordion />
       {/* Footer section */}

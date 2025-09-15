@@ -68,12 +68,12 @@ export default function FAQAccordion({
     <section className={`section py-12 ${className}`}>
       <div className="container-m max-w-4xl mx-auto px-4">
         <div>
-          <div className="text-center mb-6">
+          <div className="text-center">
             <AppButton className="text-xs" title="Questions?" />
-            <h2 className="h-m  text-2xl md:text-3xl font-bold mb-20 mt-4">
-              We are here to help
+            <h2 className="h-m  text-2xl md:text-3xl text-[#303a46] font-bold mb-15 mt-4">
+              We’re here to help
             </h2>
-            <hr className="border-b-1 border-[#E3E3E3]" />
+            <hr className=" border-[#E3E3E3]" />
           </div>
 
           <div className="space-y-4">

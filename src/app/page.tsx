@@ -1,5 +1,5 @@
+"use client";
 import Link from "next/link";
-import Image from "next/image";
 import Navbar from "./component/Navbar";
 import BannerSpinner from "./component/BannerSpinner";
 import MentalWellNessSec from "./component/MeltalWellNessSec";
@@ -7,6 +7,7 @@ import Footer from "./component/Footer";
 import FAQAccordion from "./component/FAQAccordion";
 import AppButton from "./component/common/AppButton";
 import ReadyAutomateSection from "./component/ReadyAutomateSection";
+import WebflowScrollGallery from "./component/AdjustmentImagesAnimation";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 // import img1 from "@/images/10012.avif";
@@ -92,6 +93,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Adjustment animation */}
+      <WebflowScrollGallery />
       {/* Ready Automate section */}
       <ReadyAutomateSection />
       {/* FAQ Section */}

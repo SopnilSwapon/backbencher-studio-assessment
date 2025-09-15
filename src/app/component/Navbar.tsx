@@ -10,15 +10,15 @@ export default function Navbar() {
   const [templateOpen, setTemplateOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-10">
+    <header className="sticky top-4 z-10">
       <nav className="max-w-[754px] text-[15px] bg-[#FBFBFB] border-1 border-[#adadad33] rounded-[8px] mx-auto flex items-center justify-between p-[6px] my-3">
         {/* Brand */}
         <Link href="/" className="flex items-center pl-3">
           <Image
             src="https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67ea1567f801b7bf3d63fad7_zuno-logo-b.svg"
             alt="Brand Logo"
-             width={53}
-             height={18}
+            width={53}
+            height={18}
           />
         </Link>
 

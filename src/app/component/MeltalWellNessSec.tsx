@@ -104,6 +104,7 @@ export default function MentalWellNessSec() {
 
   // transforms per image
   const xTransforms = images.map((_, i) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useTransform(stackSpring, (v) => {
       const leftShift = -205 * i; // fully stacked left offset
       const layerRightOffset = i * 8; // slight right offset per layer
@@ -112,6 +113,7 @@ export default function MentalWellNessSec() {
   );
 
   const scaleTransforms = images.map((_, i) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useTransform(stackSpring, (v) => {
       const targetScale = 1 - 0.05 * i; // e.g. 1, 0.95, 0.9...
       // interpolate from 1 -> targetScale

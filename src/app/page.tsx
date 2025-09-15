@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Navbar from "./component/Navbar";
-import BannerSpinner from "./component/BannerSpinner";
 import MentalWellNessSec from "./component/MeltalWellNessSec";
 import Footer from "./component/Footer";
 import FAQAccordion from "./component/FAQAccordion";
-import AppButton from "./component/common/AppButton";
 import ReadyAutomateSection from "./component/ReadyAutomateSection";
 import { SophisticatedImagesGallery } from "./component/SophisticatedImagesGallery";
+import CircleImageGallery from "./component/CircleImageGallery";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 // import img1 from "@/images/10012.avif";
@@ -22,7 +21,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero title section */}
-      <div className="py-10">
+      <div className="pt-8">
         <div className="text-center mx-auto">
           <Link
             href="/request-demo"
@@ -41,45 +40,13 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="py-10">
-        <div className="text-center mx-auto">
-          <AppButton title="Personal Growth" />
-          <h1 className="text-4xl md:text-8xl font-bold text-[#303A46] my-6">
-            Feel more <br /> human every day
-          </h1>
-          <Link
-            href="/request-demo"
-            className="px-[30px] py-4 rounded-full bg-[#D3EFA2] hover:bg-[#B7DB7D] transition"
-          >
-            Request demo
-          </Link>
-        </div>
-      </div>
-      <div className="py-10">
-        <div className="text-center mx-auto">
-          <Link
-            href="/request-demo"
-            className="p-[6px] px-4 rounded-full bg-[#F1F1F1]"
-          >
-            Personal Growth
-          </Link>
-          <h1 className="text-4xl md:text-8xl font-bold text-[#303A46] my-6">
-            Feel more <br /> human every day
-          </h1>
-          <Link
-            href="/request-demo"
-            className="px-[30px] py-4 rounded-full bg-[#D3EFA2] hover:bg-[#B7DB7D] transition"
-          >
-            Request demo
-          </Link>
-        </div>
-      </div>
+
+      {/* Circle image gallery section */}
+      <CircleImageGallery />
 
       <MentalWellNessSec />
-      <BannerSpinner />
 
       {/* hero spinner section */}
-      {/* Content */}
       <div className="content-spinner-wrapper mt-12 text-center">
         <div className="content-spinner">
           <div className="inner-heading-s">
@@ -92,8 +59,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Sophisticated image gallery */}
-      {/* <SophisticatedImageGallery /> */}
       <SophisticatedImagesGallery />
 
       {/* Ready Automate section */}

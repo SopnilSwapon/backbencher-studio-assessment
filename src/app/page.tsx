@@ -1,5 +1,5 @@
 import Navbar from "./component/Navbar";
-import MentalWellNessSec from "./component/StackImageGallery";
+import StackImageGallery from "./component/StackImageGallery";
 import Footer from "./component/Footer";
 import FAQAccordion from "./component/FAQAccordion";
 import ReadyAutomateSection from "./component/ReadyAutomateSection";
@@ -22,7 +22,7 @@ export default function Home() {
         {/* Circle image gallery section */}
         <CircleImageGallery />
 
-        <MentalWellNessSec />
+        <StackImageGallery />
 
         {/* hero spinner section */}
         <SophisticatedImagesGallery />
@@ -40,9 +40,7 @@ export default function Home() {
       </main>
 
       {/* Footer section */}
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

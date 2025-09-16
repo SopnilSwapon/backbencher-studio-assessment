@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper z-10 bottom-0 sticky bg-[#1E3634] text-white">
+    <footer className="sticky bottom-0 z-10  bg-[#1E3634] text-white">
       <img
         src="https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67f55a2e134ca608203f58ec_zuno-logo-green.svg"
         loading="lazy"

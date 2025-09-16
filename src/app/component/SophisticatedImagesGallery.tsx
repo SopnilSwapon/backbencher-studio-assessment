@@ -10,16 +10,16 @@ export function SophisticatedImagesGallery() {
     offset: ["start start", "end start"],
   });
 
-  // Center image transformations
+  // Center image transformations - responsive
   const centerImageWidth = useTransform(
     scrollYProgress,
     [0, 0.4, 0.7],
-    ["45vw", "80vw", "100vw"],
+    ["45vw", "80vw", "102vw"],
   );
   const centerImageHeight = useTransform(
     scrollYProgress,
     [0, 0.4, 0.7],
-    ["60vh", "80vh", "103vh"],
+    ["50vh", "70vh", "100vh"],
   );
 
   // Text overlay transformations
@@ -30,29 +30,25 @@ export function SophisticatedImagesGallery() {
   );
   const overlayOpacity = useTransform(scrollYProgress, [0.5, 0.65], [0, 0.7]);
 
-  // Side columns transformations
-  const leftColX = useTransform(scrollYProgress, [0, 0.4], ["0vw", "-25vw"]);
-  const rightColX = useTransform(scrollYProgress, [0, 0.4], ["0vw", "25vw"]);
+  // Side columns transformations - responsive
+  const leftColX = useTransform(scrollYProgress, [0, 0.4], ["0vw", "-30vw"]);
+  const rightColX = useTransform(scrollYProgress, [0, 0.4], ["0vw", "30vw"]);
 
   // Individual card transformations in left column
-  const leftCard1Y = useTransform(scrollYProgress, [0, 0.3], ["0px", "-100px"]);
-  const leftCard3Y = useTransform(scrollYProgress, [0, 0.3], ["0px", "100px"]);
+  const leftCard1Y = useTransform(scrollYProgress, [0, 0.3], ["0vh", "-15vh"]);
+  const leftCard3Y = useTransform(scrollYProgress, [0, 0.3], ["0vh", "15vh"]);
 
   // Individual card transformations in right column
-  const rightCard1Y = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    ["0px", "-100px"],
-  );
-  const rightCard3Y = useTransform(scrollYProgress, [0, 0.3], ["0px", "100px"]);
+  const rightCard1Y = useTransform(scrollYProgress, [0, 0.3], ["0vh", "-15vh"]);
+  const rightCard3Y = useTransform(scrollYProgress, [0, 0.3], ["0vh", "15vh"]);
 
   // Center column transformations
   const centerCard1Y = useTransform(
     scrollYProgress,
     [0, 0.3],
-    ["0vh", "-20vh"],
+    ["0vh", "-25vh"],
   );
-  const centerCard2Y = useTransform(scrollYProgress, [0, 0.3], ["0vh", "20vh"]);
+  const centerCard2Y = useTransform(scrollYProgress, [0, 0.3], ["0vh", "25vh"]);
 
   // Image URLs using the actual images from your HTML
   const images = {
@@ -74,7 +70,7 @@ export function SophisticatedImagesGallery() {
   };
 
   return (
-    <div className="relative mb-30">
+    <div className="relative mb-30 mt-20">
       {/* Main gallery section */}
       <div ref={containerRef} className="relative h-[400vh]">
         <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
@@ -86,14 +82,14 @@ export function SophisticatedImagesGallery() {
               height: centerImageHeight,
             }}
           >
-            <div className="relative w-full h-full rounded-[24px] overflow-hidden">
+            <div className="relative w-full h-full rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden">
               <img
                 src={images.center[0]}
                 alt="Center feature"
-                className={`w-full h-full object-cover opacity-[${overlayOpacity}]`}
+                className="w-full h-full object-cover"
               />
 
-              {/* Text overlay */}
+              {/* Text overlay content */}
               <motion.div
                 className="absolute inset-0 flex items-center justify-center"
                 style={{ opacity: overlayOpacity }}
@@ -102,14 +98,14 @@ export function SophisticatedImagesGallery() {
               </motion.div>
 
               <motion.div
-                className="absolute inset-0 bg:opacity-25 flex items-center justify-center z-20"
+                className="absolute inset-0 flex items-center justify-center z-20"
                 style={{ opacity: textOpacity, background: "rgba(0,0,0,0.6)" }}
               >
-                <div className="text-center text-white px-8">
-                  <div className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium mb-4">
+                <div className="text-center text-white px-4 md:px-8 lg:px-12">
+                  <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white/10 rounded-full text-xs md:text-sm font-medium mb-2 md:mb-4">
                     Personal Growth
                   </div>
-                  <h1 className="text-4xl md:text-7xl font-bold mb-4 leading-tight">
+                  <h1 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-2 md:mb-4 leading-tight">
                     AI that understands <br /> your emotions
                   </h1>
                 </div>
@@ -117,15 +113,18 @@ export function SophisticatedImagesGallery() {
             </div>
           </motion.div>
 
-          {/* Image gallery grid */}
+          {/*sophisticated Image gallery */}
           <div className="relative w-full h-full flex items-center justify-center">
-            {/* Left column */}
+            {/* Left column images*/}
             <motion.div
-              className="absolute -left-20 top-1/2 -translate-y-1/2 space-y-4 z-5"
-              style={{ x: leftColX }}
+              className="absolute top-1/2 -translate-y-1/2 z-5 space-y-2 md:space-y-4"
+              style={{
+                x: leftColX,
+                left: "clamp(-1vw, -5vw, -3vw)",
+              }}
             >
               <motion.div
-                className="w-111 h-70 rounded-[24px] overflow-hidden shadow-lg"
+                className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-b-[24px] overflow-hidden shadow-lg"
                 style={{ y: leftCard1Y }}
               >
                 <img
@@ -134,7 +133,7 @@ export function SophisticatedImagesGallery() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <motion.div className="w-111 h-70 rounded-[24px] overflow-hidden shadow-lg">
+              <motion.div className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-[24px] overflow-hidden shadow-lg">
                 <img
                   src={images.left[1]}
                   alt="Left 2"
@@ -142,7 +141,7 @@ export function SophisticatedImagesGallery() {
                 />
               </motion.div>
               <motion.div
-                className="w-111 h-70 rounded-[24px] overflow-hidden shadow-lg"
+                className="w-[207w] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg"
                 style={{ y: leftCard3Y }}
               >
                 <img
@@ -153,10 +152,10 @@ export function SophisticatedImagesGallery() {
               </motion.div>
             </motion.div>
 
-            {/* Center column (additional cards) */}
-            <motion.div className="absolute inset-0 flex flex-col items-center justify-center space-y-8 z-1">
+            {/* Center column images */}
+            <motion.div className="absolute inset-0 flex flex-col items-center z-1">
               <motion.div
-                className="w-166 h-42 rounded-[24px] -mt-10 rounded-t-none overflow-hidden shadow-lg"
+                className="w-[45vw] h-[22vh] rounded-b-[24px] overflow-hidden shadow-lg"
                 style={{ y: centerCard1Y }}
               >
                 <img
@@ -166,9 +165,9 @@ export function SophisticatedImagesGallery() {
                 />
               </motion.div>
               {/* Spacer for main center image */}
-              <div className="w-54 h-70" />
+              <div className="w-[25vw] h-[56vh]" />
               <motion.div
-                className="w-166 h-32 mt-34 rounded-[24px] rounded-b-none overflow-hidden shadow-lg"
+                className="w-[45vw] h-[22vh] rounded-t-[24px] overflow-hidden shadow-lg"
                 style={{ y: centerCard2Y }}
               >
                 <img
@@ -179,13 +178,16 @@ export function SophisticatedImagesGallery() {
               </motion.div>
             </motion.div>
 
-            {/* Right column */}
+            {/* Right column images */}
             <motion.div
-              className="absolute -right-20 top-1/2 -translate-y-1/2 space-y-4 z-5"
-              style={{ x: rightColX }}
+              className="absolute top-1/2 -translate-y-1/2 z-5 space-y-2 md:space-y-4"
+              style={{
+                x: rightColX,
+                right: "clamp(-1vw, -5vw, -3vw)",
+              }}
             >
               <motion.div
-                className="w-111 h-70 rounded-[24px] overflow-hidden shadow-lg"
+                className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg"
                 style={{ y: rightCard1Y }}
               >
                 <img
@@ -194,7 +196,7 @@ export function SophisticatedImagesGallery() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <motion.div className="w-111 h-70 rounded-[24px] overflow-hidden shadow-lg">
+              <motion.div className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src={images.right[1]}
                   alt="Right 2"
@@ -202,7 +204,7 @@ export function SophisticatedImagesGallery() {
                 />
               </motion.div>
               <motion.div
-                className="w-111 h-70 rounded-[24px] overflow-hidden shadow-lg"
+                className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg"
                 style={{ y: rightCard3Y }}
               >
                 <img

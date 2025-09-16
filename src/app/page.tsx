@@ -32,18 +32,6 @@ export default function Home() {
         <MentalWellNessSec />
 
         {/* hero spinner section */}
-        <div className="content-spinner-wrapper mt-12 text-center">
-          <div className="content-spinner">
-            <div className="inner-heading-s">
-              <div className="title-tag text-sm uppercase tracking-widest text-green-600 mb-2">
-                Personal Growth
-              </div>
-              <div className="h-l text-2xl md:text-4xl font-semibold text-gray-900">
-                A gentle space to understand yourself
-              </div>
-            </div>
-          </div>
-        </div>
         <SophisticatedImagesGallery />
 
         {/* Ready Automate section */}

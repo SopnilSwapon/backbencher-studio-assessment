@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import AppButton from "./common/AppButton";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,13 +48,10 @@ export default function Navbar() {
               Template <ChevronDown size={16} />
             </button>
           </div>
-
-          <Link
-            href="/request-demo"
-            className="px-4 py-2 rounded-lg bg-[#D3EFA2] hover:bg-[#B7DB7D] transition"
-          >
-            Request demo
-          </Link>
+          <AppButton
+            className="px-4 py-2 rounded-lg bg-[#D3EFA2]! hover:bg-[#B7DB7D]!"
+            title="Request demo"
+          />
         </div>
 
         {/* Mobile Menu Button */}

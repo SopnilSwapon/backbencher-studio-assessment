@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏠 Animated Homepage Project
 
-## Getting Started
+This is a modern, animated homepage built using **Next.js**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.  
+The homepage consists of multiple reusable components and animated to provide a smooth user experience & modern look.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **Navbar** – top navigation for site sections.
+- **BannerTitle** – hero banner with main title and call-to-action.
+- **CircleImageGallery** – circular image gallery for visual storytelling.
+- **StackImageGallery** – scroll-based stacked image animation using Framer Motion.
+- **SophisticatedImagesGallery** – interactive image carousel / hero spinner section.
+- **ReadyAutomateSection** – feature highlight section with automation call-to-action.
+- **FAQAccordion** – collapsible FAQ section for user guidance.
+- **AppButton** – floating call-to-action button (e.g., “Get 50% OFF”).
+- **Footer** – site footer with links and contact information.
+
+---
+
+## 🛠 Tech Stack
+
+- [Next.js](https://nextjs.org/) – React framework for server-side rendering and routing.
+- [TypeScript](https://www.typescriptlang.org/) – static type checking.
+- [Tailwind CSS](https://tailwindcss.com/) – utility-first CSS framework for styling.
+- [Framer Motion](https://www.framer.com/motion/) – animation library for interactive UI.
+
+---
+
+## 🗂 Live Link: https://backbencher-studio-assessment.vercel.app/
+
+---
+
+## ⚡ Getting Started
+
+1. **Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SopnilSwapon/backbencher-studio-assessment
+cd backbencher-studio-assessment
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+or
 
-## Learn More
+yarn install
 
-To learn more about Next.js, take a look at the following resources:
+## Start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# or
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+yarn dev

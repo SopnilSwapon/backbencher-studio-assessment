@@ -11,7 +11,7 @@ export default function Navbar() {
   const [templateOpen, setTemplateOpen] = useState(false);
 
   return (
-    <header className="fixed mx-auto w-full top-4 z-50">
+    <nav className="fixed mx-auto w-full top-4 z-50">
       <nav className="max-w-[754px] text-[15px] bg-[#FBFBFB] border-1 border-[#adadad33] rounded-[8px] mx-auto flex items-center justify-between p-[6px] my-3">
         {/* Brand */}
         <Link href="/" className="flex items-center pl-3">
@@ -83,6 +83,6 @@ export default function Navbar() {
           </Link>
         </div>
       )}
-    </header>
+    </nav>
   );
 }

@@ -1,13 +1,14 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="sticky bottom-0 z-10  bg-[#1E3634] text-white">
-      <img
+      <Image
         src="https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67f55a2e134ca608203f58ec_zuno-logo-green.svg"
         loading="lazy"
         alt="Zuno logo"
+        height={20}
+        width={20}
         className="my-10 w-[90%] mx-auto"
       />
       <div className="px-16 pb-6 pt-28 gap-8 grid grid-cols-2 md:grid-cols-5">

@@ -1,10 +1,8 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-
 "use client";
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 
 export default function StackImageGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,33 +40,14 @@ export default function StackImageGallery() {
             {/* stack images */}
             <div className="relative">
               {images.map((src, index) => {
-                const x = useTransform(
-                  stackProgress,
-                  [0, 1],
-                  [index * 400, index * 20],
-                );
-                const scale = useTransform(
-                  stackProgress,
-                  [0, 1],
-                  [1, 1 - index * 0.05],
-                );
-
                 return (
-                  <motion.div
-                    key={index}
-                    className="absolute top-1/2 -translate-y-1/2"
-                    style={{ x, scale, zIndex: 10 - index, left: "0px" }}
-                  >
-                    <Image
+                  <div key={index}>
+                    <ImageCard
                       src={src}
-                      alt={`Mental wellness ${index + 1}`}
-                      width={381}
-                      height={333}
-                      className="w-[381px] h-[333px] object-cover rounded-2xl shadow-2xl ring-2 ring-white/30"
-                      draggable={false}
-                      priority={index === 0}
+                      index={index}
+                      stackProgress={stackProgress}
                     />
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -96,3 +75,31 @@ export default function StackImageGallery() {
     </div>
   );
 }
+
+type TImageCardProps = {
+  src: string;
+  index: number;
+  stackProgress: MotionValue<number>;
+};
+
+const ImageCard = ({ src, index, stackProgress }: TImageCardProps) => {
+  const x = useTransform(stackProgress, [0, 1], [index * 400, index * 20]);
+  const scale = useTransform(stackProgress, [0, 1], [1, 1 - index * 0.05]);
+  return (
+    <motion.div
+      key={index}
+      className="absolute top-1/2 -translate-y-1/2"
+      style={{ x, scale, zIndex: 10 - index, left: "0px" }}
+    >
+      <Image
+        src={src}
+        alt={`Mental wellness ${index + 1}`}
+        width={380}
+        height={360}
+        className="w-[380px] h-[360px] object-cover rounded-2xl shadow-2xl ring-2 ring-white/30"
+        draggable={false}
+        priority={index === 0}
+      />
+    </motion.div>
+  );
+};

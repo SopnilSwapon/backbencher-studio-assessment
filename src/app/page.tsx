@@ -12,9 +12,8 @@ export default function Home() {
   return (
     <div>
       {/* Navbar */}
-      <nav>
-        <Navbar />
-      </nav>
+
+      <Navbar />
       <main className="sticky bg-white z-30 -mb-46 rounded-b-[60px]">
         {/* banner title section */}
         <BannerTitle />

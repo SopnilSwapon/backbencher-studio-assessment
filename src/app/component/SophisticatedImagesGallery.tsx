@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 export function SophisticatedImagesGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,9 +83,11 @@ export function SophisticatedImagesGallery() {
             }}
           >
             <div className="relative w-full h-full rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden">
-              <img
+              <Image
                 src={images.center[0]}
                 alt="Center feature"
+                height={200}
+                width={200}
                 className="w-full h-full object-cover"
               />
 
@@ -127,27 +129,33 @@ export function SophisticatedImagesGallery() {
                 className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-b-[24px] overflow-hidden shadow-lg"
                 style={{ y: leftCard1Y }}
               >
-                <img
+                <Image
                   src={images.left[0]}
                   alt="Left 1"
+                  height={200}
+                  width={200}
                   className="w-full h-full object-cover"
                 />
               </motion.div>
               <motion.div className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-[24px] overflow-hidden shadow-lg">
-                <img
+                <Image
                   src={images.left[1]}
                   alt="Left 2"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
               <motion.div
                 className="w-[207w] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg"
                 style={{ y: leftCard3Y }}
               >
-                <img
+                <Image
                   src={images.left[2]}
                   alt="Left 3"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
             </motion.div>
@@ -158,10 +166,12 @@ export function SophisticatedImagesGallery() {
                 className="w-[45vw] h-[22vh] rounded-b-[24px] overflow-hidden shadow-lg"
                 style={{ y: centerCard1Y }}
               >
-                <img
+                <Image
                   src={images.center[1]}
                   alt="Center top"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
               {/* Spacer for main center image */}
@@ -170,10 +180,12 @@ export function SophisticatedImagesGallery() {
                 className="w-[45vw] h-[22vh] rounded-t-[24px] overflow-hidden shadow-lg"
                 style={{ y: centerCard2Y }}
               >
-                <img
+                <Image
                   src={images.center[2]}
                   alt="Center bottom"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
             </motion.div>
@@ -190,27 +202,33 @@ export function SophisticatedImagesGallery() {
                 className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg"
                 style={{ y: rightCard1Y }}
               >
-                <img
+                <Image
                   src={images.right[0]}
                   alt="Right 1"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
               <motion.div className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src={images.right[1]}
                   alt="Right 2"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
               <motion.div
                 className="w-[27vw] h-[25vh] md:h-[28vh] lg:h-[30vh] xl:h-[32vh] rounded-xl md:rounded-2xl overflow-hidden shadow-lg"
                 style={{ y: rightCard3Y }}
               >
-                <img
+                <Image
                   src={images.right[2]}
                   alt="Right 3"
                   className="w-full h-full object-cover"
+                  height={200}
+                  width={200}
                 />
               </motion.div>
             </motion.div>

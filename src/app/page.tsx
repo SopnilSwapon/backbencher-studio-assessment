@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Navbar from "./component/Navbar";
 import MentalWellNessSec from "./component/MeltalWellNessSec";
 import Footer from "./component/Footer";
@@ -6,6 +5,8 @@ import FAQAccordion from "./component/FAQAccordion";
 import ReadyAutomateSection from "./component/ReadyAutomateSection";
 import { SophisticatedImagesGallery } from "./component/SophisticatedImagesGallery";
 import CircleImageGallery from "./component/CircleImageGallery";
+import BannerTitle from "./component/BannerTitle";
+import AppButton from "./component/common/AppButton";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 // import img1 from "@/images/10012.avif";
@@ -22,26 +23,8 @@ export default function Home() {
         <Navbar />
       </nav>
       <main className="sticky bg-white z-30 -mb-46 rounded-b-[60px]">
-        {/* Hero title section */}
-        <div className="pt-8">
-          <div className="text-center mx-auto">
-            <Link
-              href="/request-demo"
-              className="p-[6px] px-4 rounded-full bg-[#F1F1F1]"
-            >
-              Personal Growth
-            </Link>
-            <h1 className="text-4xl md:text-8xl font-bold text-[#303A46] my-6">
-              Feel more <br /> human every day
-            </h1>
-            <Link
-              href="/request-demo"
-              className="px-[30px] py-4 rounded-full bg-[#D3EFA2] hover:bg-[#B7DB7D] transition"
-            >
-              Request demo
-            </Link>
-          </div>
-        </div>
+        {/* banner title section */}
+        <BannerTitle />
 
         {/* Circle image gallery section */}
         <CircleImageGallery />
@@ -68,6 +51,10 @@ export default function Home() {
 
         {/* FAQ Section */}
         <FAQAccordion />
+        <AppButton
+          className="fixed bottom-3 right-3 rounded-sm! font-semibold px-6 py-3 z-50"
+          title="Get 50% OFF"
+        />
       </main>
 
       {/* Footer section */}

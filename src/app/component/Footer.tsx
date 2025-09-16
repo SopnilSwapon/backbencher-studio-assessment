@@ -11,7 +11,7 @@ export default function Footer() {
         className="my-10 w-[90%] mx-auto"
       />
       <div className="px-16 pb-6 pt-28 gap-8 grid grid-cols-2 md:grid-cols-5">
-        {/* Logo */}
+        {/*Zuno Logo */}
         <Image
           src="https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67e725b86fdf9ee970fe1013_zuno-logo.svg"
           alt="Zuno Logo Green"

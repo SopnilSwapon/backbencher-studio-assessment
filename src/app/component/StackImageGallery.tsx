@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function MentalWellnessSection() {
+export default function StackImageGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Scroll progress

@@ -1,5 +1,5 @@
 import Navbar from "./component/Navbar";
-import MentalWellNessSec from "./component/MeltalWellNessSec";
+import MentalWellNessSec from "./component/StackImageGallery";
 import Footer from "./component/Footer";
 import FAQAccordion from "./component/FAQAccordion";
 import ReadyAutomateSection from "./component/ReadyAutomateSection";
@@ -7,14 +7,7 @@ import { SophisticatedImagesGallery } from "./component/SophisticatedImagesGalle
 import CircleImageGallery from "./component/CircleImageGallery";
 import BannerTitle from "./component/BannerTitle";
 import AppButton from "./component/common/AppButton";
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import { useRef } from "react";
-// import img1 from "@/images/10012.avif";
-// import img2 from "@/images/10013.avif";
-// import img3 from "@/images/10014.avif";
-// import img4 from "@/images/10015.avif";
-// import img5 from "@/images/10017.avif";
-// import Image from "next/image";
+
 export default function Home() {
   return (
     <div>
@@ -39,6 +32,7 @@ export default function Home() {
 
         {/* FAQ Section */}
         <FAQAccordion />
+        {/* Floating button of 50% off */}
         <AppButton
           className="fixed bottom-3 right-3 rounded-sm! font-semibold px-6 py-3 z-50"
           title="Get 50% OFF"
@@ -46,7 +40,9 @@ export default function Home() {
       </main>
 
       {/* Footer section */}
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

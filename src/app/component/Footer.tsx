@@ -1,9 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper bg-[#1E3634] text-white relative">
-      <div className="px-16 py-12 gap-8 grid grid-cols-2 md:grid-cols-5">
+    <footer className="footer-wrapper z-10 bottom-0 sticky bg-[#1E3634] text-white">
+      <img
+        src="https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67f55a2e134ca608203f58ec_zuno-logo-green.svg"
+        loading="lazy"
+        alt="Zuno logo"
+        className="my-10 w-[90%] mx-auto"
+      />
+      <div className="px-16 pb-6 pt-28 gap-8 grid grid-cols-2 md:grid-cols-5">
         {/* Logo */}
         <Image
           src="https://cdn.prod.website-files.com/675c8e48ca0e0fb5ab421239/67e725b86fdf9ee970fe1013_zuno-logo.svg"
@@ -106,7 +113,7 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Email Address"
-              className="px-3 py-2 rounded-md border-gray-600 border-1"
+              className="px-3 py-2 rounded-md border-[#536e6c] border-1"
               required
             />
           </form>
@@ -118,7 +125,7 @@ export default function Footer() {
       </div>
 
       {/* Footer baseline */}
-      <div className="border-t border-gray-700 pt-8 pb-11 px-16 text-xs text-[#7e7e80]">
+      <div className="border-t border-[#536e6c] pt-8 pb-11 mx-16 text-xs text-[#7e7e80]">
         Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere
         erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est
         non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
